@@ -1,3 +1,8 @@
-cmake_minimum_required(VERSION 3.13)
-project(prj1 CXX)
+include(FetchContent)
+
+FetchContent_Declare(json URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
+FetchContent_MakeAvailable(json)
+
 add_executable(a.out main.cpp hello.cpp hello.hpp) 
+
+target_link_libraries(a.out PRIVATE nlohmann_json::nlohmann_json)

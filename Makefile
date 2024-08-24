@@ -1,10 +1,12 @@
-IMAGE_NAME := "example-dev-container"
+IMAGE_NAME := "example-nlohmann-json"
 CONTAINER_NAME := $(IMAGE_NAME)
 WORKDIR := /workspace
+
 
 .PHONY: run
 run: image
 	docker run --name $(CONTAINER_NAME) -it --rm -v $(PWD):$(WORKDIR) $(IMAGE_NAME)
+
 
 .PHONY: image
 image:

@@ -1,9 +1,7 @@
 #include <iostream>
 
-#include "hello.hpp"
-
-int main(){
+int main()
+{
     std::cout << "main" << std::endl;
-    hello();
     return 0;
 }
